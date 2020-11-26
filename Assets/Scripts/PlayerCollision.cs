@@ -12,9 +12,9 @@ public class PlayerCollision : MonoBehaviour {
         // }
         //If the boat or the net collides with an obstacle, finish the game.
         if (transform.CompareTag("BoatAndStick") && collision.transform.CompareTag("Obstacle"))
-        {
             GameController.instance.FinishGame("boat");
-        }
+        else if (transform.CompareTag("BoatAndStick") && collision.transform.CompareTag("Ocean"))
+            GameController.instance.FinishGame("ocean");
 
         //If the net collides with a fish, call takeFish function from
         //GameController instance and delete the fish.

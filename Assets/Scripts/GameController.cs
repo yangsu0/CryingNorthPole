@@ -51,7 +51,10 @@ public class GameController : MonoBehaviour
         //Stop the game.
         Time.timeScale = 0;
         gameOver = true;
+        if(crash == "boat")
         AudioManager.instance.ManageAudio("boatCrack", "sound", "play");
+        else if(crash == "ocean")
+        AudioManager.instance.ManageAudio("splash", "sound", "play");
 
         //Save the time the player has been playing a match.
         timeCounter = Time.time - timeCounter;
