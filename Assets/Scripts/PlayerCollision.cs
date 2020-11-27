@@ -11,6 +11,7 @@ public class PlayerCollision : MonoBehaviour {
         //     movement.enabled = false;
         // }
         //If the boat or the net collides with an obstacle, finish the game.
+
         if (transform.CompareTag("BoatAndStick") && collision.transform.CompareTag("Obstacle"))
             GameController.instance.FinishGame("boat");
         else if (transform.CompareTag("BoatAndStick") && collision.transform.CompareTag("Ocean"))
