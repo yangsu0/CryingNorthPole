@@ -45,6 +45,13 @@ public class GameController : MonoBehaviour
         AudioManager.instance.ManageAudio("takeFish", "sound", "play");
     }
 
+    public void TakeFish2()
+    {
+        fishes = fishes + 5;
+        fishCounterText.text = "" + fishes;
+        AudioManager.instance.ManageAudio("takeFish", "sound", "play");
+    }
+
     //Function FinishGame, called when game ends.
     public void FinishGame(string crash)
     {

@@ -25,4 +25,20 @@ public class PlayerCollision : MonoBehaviour {
             Destroy(collision.gameObject);
         }
     }
+
+   private void OnTriggerEnter(Collider collision) {
+        if (collision.gameObject.CompareTag("Fish")) {
+            collision.gameObject.SetActive(false);
+            GameController.instance.TakeFish();
+            Destroy(collision.gameObject);
+            Debug.Log(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Fish2")) {
+            collision.gameObject.SetActive(false);
+            GameController.instance.TakeFish2();
+            Destroy(collision.gameObject);
+            Debug.Log(collision.gameObject);
+        }
+    }
 }

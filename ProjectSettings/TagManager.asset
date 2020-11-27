@@ -8,6 +8,7 @@ TagManager:
   - BoatAndStick
   - Fish
   - Ocean
+  - Fish2
   layers:
   - Default
   - TransparentFX
