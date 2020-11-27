@@ -16,7 +16,11 @@ public class PlayerCollision : MonoBehaviour {
             GameController.instance.FinishGame("boat");
         else if (transform.CompareTag("BoatAndStick") && collision.transform.CompareTag("Ocean"))
             GameController.instance.FinishGame("ocean");
-
+        else if (collision.transform.CompareTag("Final"))
+        {
+            Debug.Log("gooood");
+            GameController.instance.FinishGame("Finish");
+        }
         //If the net collides with a fish, call takeFish function from
         //GameController instance and delete the fish.
         if (collision.transform.CompareTag("Fish"))
@@ -31,14 +35,14 @@ public class PlayerCollision : MonoBehaviour {
             collision.gameObject.SetActive(false);
             GameController.instance.TakeFish();
             Destroy(collision.gameObject);
-            Debug.Log(collision.gameObject);
+            //Debug.Log(collision.gameObject);
         }
 
         if (collision.gameObject.CompareTag("Fish2")) {
             collision.gameObject.SetActive(false);
             GameController.instance.TakeFish2();
             Destroy(collision.gameObject);
-            Debug.Log(collision.gameObject);
+            //Debug.Log(collision.gameObject);
         }
     }
 }

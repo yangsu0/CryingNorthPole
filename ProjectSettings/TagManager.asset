@@ -9,6 +9,8 @@ TagManager:
   - Fish
   - Ocean
   - Fish2
+  - Flag
+  - Final
   layers:
   - Default
   - TransparentFX

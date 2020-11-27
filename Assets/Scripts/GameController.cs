@@ -73,12 +73,20 @@ public class GameController : MonoBehaviour
         //Update the best score.
         if (fishes > GlobalVars.instance.bestScore)
             GlobalVars.instance.bestScore = fishes;
-
-        //Update the texts in final screen.
-        finalTexts[0].text = "END OF GAME";
-        finalTexts[1].text = "SCORE: " + fishes + " (BEST: " + GlobalVars.instance.bestScore + ")";
-        finalTexts[2].text = "TIME: " + timerString + ".";
-
+        if (crash == "Finish")
+        {
+            //Update the texts in final screen.
+            finalTexts[0].text = "Mission Clear!";
+            finalTexts[1].text = "SCORE: " + fishes + ", You are the BEST!";
+            finalTexts[2].text = "TIME: " + timerString;
+        }
+        else
+        {
+            //Update the texts in final screen.
+            finalTexts[0].text = "END OF GAME";
+            finalTexts[1].text = "SCORE: " + fishes + " (BEST: " + GlobalVars.instance.bestScore + ")";
+            finalTexts[2].text = "TIME: " + timerString;
+        }
         //Activate the endGame UI and deactivate in-game UI.
         ingameUI.SetActive(false);
         endGame.SetActive(true);
