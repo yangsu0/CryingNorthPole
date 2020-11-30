@@ -5679,7 +5679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   music:
   - name: menu
-    clip: {fileID: 8300000, guid: 196b54e55b9f14a38ab664f751338a66, type: 3}
+    clip: {fileID: 8300000, guid: 5f181965904c34652908828fbee4e042, type: 3}
     volume: 0.5
     pitch: 1
     loop: 1
@@ -14625,8 +14625,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136103085}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.092, y: 0.0001, z: 480}
-  m_LocalScale: {x: 15.2, y: 1, z: 1}
+  m_LocalPosition: {x: -0.052, y: -0.1, z: 480}
+  m_LocalScale: {x: 14.2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 257
